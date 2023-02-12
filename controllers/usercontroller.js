@@ -30,8 +30,9 @@ class usercontroller{
         
     }
     static Register = async(req,res) =>{
-        //console.log(req.files.avatar)
-        const file = req.files.avatar;
+        //console.log(req.body)
+        //console.log(req.files.image)
+        const file = req.files.image;
         const myCloud = await cloudinary.uploader.upload(file.tempFilePath, {
           folder: "avatars",
           width: 150,
